@@ -1,0 +1,500 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 40px;
+  background: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.header {
+  position: relative;
+  padding: 140px 20px 100px;
+  text-align: center;
+  color: #90caf9;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1.5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%), url('background.jpg') no-repeat center center / cover;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header::before {
+  content: none;
+}
+
+.header h1, .header h2 {
+  font-size: 56px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.header p.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: #cccccc;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+/* Section Titles (About Me, Related Posts, Contact Me, etc.) */
+.section-title {
+  font-size: 22px;
+  color: #90caf9;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #90caf9;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Layout Section */
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+.leftcolumn {
+  float: left;
+  width: 70%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 28%;
+  margin-left: 2%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  background-color: #1e1e1e;
+  padding: 30px;
+  margin-top: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(0.98);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.card h2 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.card h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #90caf9;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.card h3 {
+  color: #aaaaaa;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.date-label {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin: 12px auto 20px auto;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.date-label:hover {
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.6);
+}
+
+/* Post Images */
+.post-img1, .post-img2 {
+  width: 75%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 30px auto 0 auto;
+  display: block;
+}
+
+/* Post Content Text */
+.post-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* Placeholder Fake Images */
+.fakeimg {
+  background-color: #333;
+  width: 100%;
+  padding: 30px;
+  margin-top: 10px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+/* Related Posts Section */
+.recent-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-posts li {
+  margin-bottom: 12px;
+}
+
+.recent-posts li a {
+  text-decoration: none;
+  color: #90caf9;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.recent-posts li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* About Me Section */
+.profile-pic {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.05);
+}
+
+.about-card {
+  text-align: center;
+}
+
+.about-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #3c3c3c;
+  text-align: justify;
+  display: inline-block;
+  max-width: 500px;
+}
+
+/* Contact Me Section */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 3px 0;
+  gap: 6px;
+  justify-content: flex-start;
+  color: #e0e0e0;
+}
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #90caf9;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1e1e1e;
+  color: #bbbbbb;
+  padding: 50px 20px 20px 20px;
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.footer-left,
+.footer-links {
+  flex: 1 1 250px;
+  margin-bottom: 30px;
+}
+
+.footer-left h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-links h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  color: #777777;
+  font-size: 13px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+  }
+}
+
+/* Ensure clickable links */
+.recent-posts a {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.contact-link {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Align section titles */
+.rightcolumn .section-title,
+.about-card .section-title,
+.footer .section-title {
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.rightcolumn .section-title::after,
+.about-card .section-title::after,
+.footer .section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #90caf9;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Additional Text Colors Fix */
+.card span, .recent-posts li, .footer-links ul li, .footer-bottom p {
+  color: #e0e0e0;
+}
+
+.footer-left p {
+  color: #cccccc;
+}
+
+.rightcolumn .card p {
+  color: #cccccc;
+}
+
+.date-label {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .card {
+      padding: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .gallery-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .lightbox {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+      padding: 20px;
+    }
+    .lightbox:target {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+    .lightbox-content {
+      position: relative;
+      text-align: center;
+    }
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .next-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font-size: 20px;
+      color: #ffffff;
+      text-decoration: none;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+
+
+
